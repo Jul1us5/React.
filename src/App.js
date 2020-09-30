@@ -1,15 +1,15 @@
 import React from "react";
-import "./App.css";
-import Header from "./dist/header";
-import Section from "./dist/section";
+import "./App.scss";
+import 'normalize.css';
+import Header from "./components/Header/Header";
 
 const App = () => {
-  return (
-    <div className="App">
-      <Header />
-      <Section />
-    </div>
-  );
+  return <div className="App">
+    <Header />
+    <nav>Navigation</nav>
+    <section>Section</section>
+    <footer>Footer</footer>
+  </div>;
 };
 
 export default App;
