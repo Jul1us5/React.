@@ -1,14 +1,15 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import style from'./Nav.module.scss';
 
 const Nav = () => {
     return (
         <nav className={style.color}>
-            <a href="#link">HOME</a>
-            <a href="#link">PROFILE</a>
-            <a href="#link">FEED</a>
-            <a href="#link">DIALOGS</a>
-            <a href="#link">NEWS</a>
+            <NavLink to="#link">HOME</NavLink>
+            <NavLink to="#link">PROFILE</NavLink>
+            <NavLink to="/profile">FEED</NavLink>
+            <NavLink to="/dialogs">DIALOGS</NavLink>
+            <NavLink to="#link">SETTINGS</NavLink>
         </nav>
     );
 }
