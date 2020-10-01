@@ -1,0 +1,17 @@
+section {
+    grid-area: s;
+    background-color: antiquewhite;
+    .header {
+        width: 100%;
+        height: 60px;
+        background-color: rgb(255, 223, 182);
+    }
+    .body {
+        width: 100%;
+        height: 60px;
+        background-color: rgb(255, 225, 187); 
+    }
+}
+.color {
+    background-color: rgb(200, 255, 0);
+}
