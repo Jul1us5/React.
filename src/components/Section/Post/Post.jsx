@@ -3,7 +3,7 @@ import style from './Post.module.scss';
 
 const Post = (props) => {
     return (
-        <div>{props.value}</div>
+        <div className={style.background}>{props.value}</div>
     );
 }
 
