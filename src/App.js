@@ -6,6 +6,9 @@ import Section from "./components/Section/Section";
 import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
 import Dialogs from "./components/Dialogs/Dialogs";
+import Profile from "./components/Profile/Profile";
+import Home from "./components/Home/Home";
+import Settings from "./components/Settings/Settings";
 import { BrowserRouter, Route } from "react-router-dom";
 
 const App = () => {
@@ -14,9 +17,11 @@ const App = () => {
       <div className="wrapper">
         <Header />
         <Nav />
-        <Section />
+        <Home />
         <Route path='/dialogs' component={Dialogs}/>
-        <Route path='/profile' component={Section}/>
+        <Route path='/section' component={Section}/>
+        <Route path='/profile' component={Profile}/>
+        <Route path='/settings' component={Settings}/>
         <Footer />
       </div>
     </BrowserRouter>
