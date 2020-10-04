@@ -1,0 +1,22 @@
+.messages {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+span {
+    display: grid;
+    a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        margin-top: 4px;
+    }
+    .active {
+        color: red;
+    }
+}
+aside {
+    margin: 0;
+    padding: 0;
+    p {
+        display: grid;
+    }
+}
