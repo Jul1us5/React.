@@ -5,11 +5,11 @@ import style from'./Nav.module.scss';
 const Nav = () => {
     return (
         <nav className={style.color}>
-            <NavLink to="/home">HOME</NavLink>
-            <NavLink to="/profile">PROFILE</NavLink>
-            <NavLink to="/section">FEED</NavLink>
-            <NavLink to="/dialogs">DIALOGS</NavLink>
-            <NavLink to="/settings">SETTINGS</NavLink>
+            <NavLink to="/home" activeClassName={style.active}>HOME</NavLink>
+            <NavLink to="/profile" activeClassName={style.active}>PROFILE</NavLink>
+            <NavLink to="/section" activeClassName={style.active}>FEED</NavLink>
+            <NavLink to="/dialogs" activeClassName={style.active}>DIALOGS</NavLink>
+            <NavLink to="/settings" activeClassName={style.active}>SETTINGS</NavLink>
         </nav>
     );
 }
