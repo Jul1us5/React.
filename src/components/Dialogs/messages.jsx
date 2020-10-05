@@ -6,14 +6,28 @@ const Message = (props) => {
 };
 
 const Messages = (props) => {
-  return (
-    <aside>
-      <Message text="Hi" />
-      <Message text="My name is Julius" />
-      <Message text="I creating Single page application" />
-      <Message text="React!" />
-    </aside>
-  );
+  let MessageData = [
+    {
+      id: 1,
+      text: "Hi",
+    },
+    {
+      id: 2,
+      text: "My name is Julius",
+    },
+    {
+      id: 3,
+      text: "I creating Single page application",
+    },
+    {
+      id: 4,
+      text: "React!",
+    },
+  ];
+
+  let MessageDataElement = MessageData.map((el,i) => <Message key={i} text={el.text} />);
+
+  return <aside>{MessageDataElement}</aside>;
 };
 
 export default Messages;

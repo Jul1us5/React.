@@ -14,15 +14,34 @@ const AuthorItem = (props) => {
 };
 
 const Author = (props) => {
-  return (
-    <div>
-      <AuthorItem name="Julius" id="1" />
-      <AuthorItem name="Evelina" id="2" />
-      <AuthorItem name="Natalija" id="3" />
-      <AuthorItem name="Paulius" id="4" />
-      <AuthorItem name="Arturas" id="5" />
-    </div>
-  );
+  let AuthorData = [
+    {
+      name: "Julius",
+      id: 1,
+    },
+    {
+      name: "Evelina",
+      id: 2,
+    },
+    {
+      name: "Natalija",
+      id: 3,
+    },
+    {
+      name: "Paulius",
+      id: 4,
+    },
+    {
+      name: "Arturas",
+      id: 5,
+    },
+  ];
+
+  let AuthorDataElement = AuthorData.map((el, i) => (
+    <AuthorItem key={i} name={el.name} id={el.id} />
+  ));
+
+  return <div>{AuthorDataElement}</div>;
 };
 
 export default Author;
