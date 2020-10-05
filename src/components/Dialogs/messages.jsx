@@ -1,15 +1,21 @@
 import React from "react";
 import style from "./Dialogs.module.scss";
 
-const Messages = (props) => {
+const Message = (props) => {
   return (
-    <aside>
-      <span>HI!</span>
-      <span>My name is Julius</span>
-      <span>I creating Single page application</span>
-      <span>React!</span>
-    </aside>
+    <div>
+      <div>{props.text}</div>
+    </div>
   );
+};
+
+const Messages = (props) => {
+
+  let MessageDataElement = props.MessageData.map((el, i) => (
+    <Message text={el.text} key={i} />
+  ));
+
+  return <aside>{MessageDataElement}</aside>;
 };
 
 export default Messages;
