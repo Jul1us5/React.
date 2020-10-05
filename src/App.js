@@ -18,10 +18,10 @@ const App = () => {
         <Header />
         <Nav />
         <Home />
-        <Route path='/dialogs' component={Dialogs}/>
-        <Route path='/section' component={Section}/>
-        <Route path='/profile' component={Profile}/>
-        <Route path='/settings' component={Settings}/>
+        <Route path="/dialogs" render={ () => <Dialogs />} />
+        <Route path="/section" render={ () => <Section />} />
+        <Route path="/profile" render={ () => <Profile />} />
+        <Route path="/settings" render={ () => <Settings />} />
         <Footer />
       </div>
     </BrowserRouter>
