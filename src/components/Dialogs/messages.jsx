@@ -10,8 +10,7 @@ const Message = (props) => {
 };
 
 const Messages = (props) => {
-
-  let MessageDataElement = props.MessageData.map((el, i) => (
+  let MessageDataElement = props.messages.map((el, i) => (
     <Message text={el.text} key={i} />
   ));
 
