@@ -14,7 +14,7 @@ const AuthorItem = (props) => {
 };
 
 const Author = (props) => {
-  let AuthorDataElement = props.AuthorData.map((el, i) => (
+  let AuthorDataElement = props.authors.map((el, i) => (
     <AuthorItem key={i} name={el.name} id={el.id} />
   ));
 
