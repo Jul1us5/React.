@@ -1,0 +1,23 @@
+.body {
+    width: 100%;
+    height: 100px;
+    textarea {
+        width: 1000px;
+        height: 20px;
+        resize: none;
+    }
+    .comment {
+        resize: none;
+        height: 50px;
+        width: 350px;
+    }
+    button {
+        display: grid;
+        width: 50px;
+        text-align: center;
+    }
+    .postArea {
+        margin-top: 20px;
+        color: red;
+    }
+}

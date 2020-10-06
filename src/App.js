@@ -19,8 +19,8 @@ const App = (props) => {
         <Header />
         <Nav />
         <Home />
-        <Route path="/dialogs" render={ () => <Dialogs state={props.state.dialogs}/>} />
-        <Route path="/section" render={ () => <Section />} />
+        <Route path="/dialogs" render={ () => <Dialogs state={props.state}/>} />
+        <Route path="/section" render={ () => <Section state={props.state} createPost={props.createPost}/>} />
         <Route path="/profile" render={ () => <Profile />} />
         <Route path="/settings" render={ () => <Settings />} />
         <Footer />
