@@ -7,8 +7,8 @@ const Section = (props) => {
   return (
     <section>
       <div className={style.header}>Header</div>
-      <div className={style.body}>Body</div>
-      <Post state={props.state.posts} createPost={props.createPost}/>
+      {/* <div className={style.body}>Body</div> */}
+      <Post state={props.state.posts} newPostText={props.state.posts.newPostText} createPost={props.createPost} updatePostTextArea={props.updatePostTextArea}/>
     </section>
   );
 

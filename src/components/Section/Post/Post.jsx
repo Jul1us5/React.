@@ -4,22 +4,24 @@ import style from "./Post.module.scss";
 
 const Post = (props) => {
 
-  let newPost = React.createRef();
-
-  let addPost = () => {
-    
-    let text = newPost.current.value;
-    props.createPost(text);
-    newPost.current.value = '';
-  };
-
   let printPost = props.state.onePost.map((el, i) => (
     <Posted value={el.text} key={i} />
   ));
 
+  let newPost = React.createRef();
+
+  let addPost = () => {
+    props.createPost();
+  };
+
+  let onPostChange = () => {
+    let text = newPost.current.value;
+    props.updatePostTextArea(text);
+  }
+
   return (
     <div className={style.body}>
-      <textarea ref={newPost} className={style.comment}></textarea>
+      <textarea onChange={onPostChange} ref={newPost} className={style.comment} value={props.newPostText}/>
       <button onClick={addPost}>Click</button>
       <div className={style.postArea}>{printPost}</div>
     </div>

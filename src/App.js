@@ -20,7 +20,7 @@ const App = (props) => {
         <Nav />
         <Home />
         <Route path="/dialogs" render={ () => <Dialogs state={props.state}/>} />
-        <Route path="/section" render={ () => <Section state={props.state} createPost={props.createPost}/>} />
+        <Route path="/section" render={ () => <Section state={props.state} createPost={props.createPost} updatePostTextArea={props.updatePostTextArea}/>} />
         <Route path="/profile" render={ () => <Profile />} />
         <Route path="/settings" render={ () => <Settings />} />
         <Footer />

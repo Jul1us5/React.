@@ -54,15 +54,28 @@ let state = {
         text: "Im on my way!",
       },
     ],
+    newPostText: 'new Post'
   },
 };
 
-export let createPost = (postMessage) => {
+// window.state = state;
+
+export let createPost = () => {
+  let newPost = {
+    id: 5,
+    text: state.posts.newPostText
+  };
+  state.posts.onePost.push(newPost);
+  state.posts.newPostText = '';
+  rerender(state);
+}
+
+export let updatePostTextArea = (newText) => {
   let newPost = {
     id: 5,
     text: postMessage
   };
-  state.posts.onePost.push(newPost);
+  state.posts.newPostText = newText;
   rerender(state);
 }
 
