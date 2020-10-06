@@ -1,4 +1,6 @@
-import { rerender } from "../render";
+let rerender = () => {
+  console.log('Render');
+}
 
 let state = {
   dialogs: {
@@ -60,7 +62,7 @@ let state = {
 
 // window.state = state;
 
-export let createPost = () => {
+export const createPost = () => {
   let newPost = {
     id: 5,
     text: state.posts.newPostText
@@ -70,13 +72,17 @@ export let createPost = () => {
   rerender(state);
 }
 
-export let updatePostTextArea = (newText) => {
+export const updatePostTextArea = (newText) => {
   let newPost = {
     id: 5,
     text: postMessage
   };
   state.posts.newPostText = newText;
   rerender(state);
+}
+
+export const subscribe = (observer) => {
+  rerender = observer;
 }
 
 export default state;
