@@ -1,3 +1,5 @@
+import { rerender } from "../render";
+
 let state = {
   dialogs: {
     authors: [
@@ -41,6 +43,27 @@ let state = {
       },
     ],
   },
+  posts: {
+    onePost: [
+      {
+        id: 1,
+        text: "Hi! Its my first props!",
+      },
+      {
+        id: 2,
+        text: "Im on my way!",
+      },
+    ],
+  },
 };
+
+export let createPost = (postMessage) => {
+  let newPost = {
+    id: 5,
+    text: postMessage
+  };
+  state.posts.onePost.push(newPost);
+  rerender(state);
+}
 
 export default state;
