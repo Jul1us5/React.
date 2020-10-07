@@ -56,32 +56,28 @@ let store = {
       newPostText: 'new Post'
     },
   },
-  getState() {
-    return this._state;
-  },
   _callSubscriber() {
     console.log('Render')
   },
-  createPost() {
-    let newPost = {
-      id: 5,
-      text: this._state.posts.newPostText
-    };
-    this._state.posts.onePost.push(newPost);
-    this._state.posts.newPostText = '';
-    this._callSubscriber(this._state)
-  },
-  updatePostTextArea(newText) {
-    // eslint-disable-next-line no-unused-vars
-    let newPost = {
-      id: 5,
-      text: postMessage
-    };
-    this._state.posts.newPostText = newText;
-    this._callSubscriber(this._state);
+  getState() {
+    return this._state;
   },
   subscribe(observer) {
     this._callSubscriber = observer;
+  },
+  dispatch(action) {
+    if(action.type === 'CREATE-POST') {
+      let newPost = {
+        id: 5,
+        text: this._state.posts.newPostText
+      };
+      this._state.posts.onePost.push(newPost);
+      this._state.posts.newPostText = '';
+      this._callSubscriber(this._state)
+    } else if (action.type === 'UPDATE-POST-AREA') {
+      this._state.posts.newPostText = action.newText;
+      this._callSubscriber(this._state);
+    }
   }
 }
 window.store = store;
