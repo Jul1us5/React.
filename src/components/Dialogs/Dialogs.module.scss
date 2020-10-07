@@ -1,22 +1,73 @@
 .messages {
-    display: grid;
-    grid-template-columns: 2fr 10fr;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 4fr 10fr;
 }
-span {
-    display: grid;
-    a {
-        color: rgb(0, 0, 0);
-        text-decoration: none;
-        margin-top: 4px;
-    }
-    .active {
-        color: red;
-    }
-}
+// span {
+//   display: grid;
+//   a {
+//     color: rgb(0, 0, 0);
+//     text-decoration: none;
+//     margin-top: 4px;
+//   }
+//   .active {
+//     color: red;
+//   }
+// }
 aside {
-    margin: 0;
-    padding: 0;
-    p {
-        display: grid;
+  margin: 0;
+  padding: 10px;
+  position: relative;
+  //   background-color: rgb(240, 240, 240);
+  border-left: 1px solid rgb(255, 255, 255);
+  border-right: 1px solid rgb(255, 255, 255);
+  width: 500px;
+
+  p {
+    display: grid;
+  }
+}
+.input {
+  display: grid;
+  width: 500px;
+  grid-template-columns: 1fr 10fr 1fr;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  .who {
+    height: 35px;
+    width: 35px;
+    img {
+      @extend .who;
+      margin: 0 auto;
+      margin-top: 2px;
+      border-radius: 50px;
     }
+  }
+  button {
+    width: 50px;
+    height: 35px;
+    margin-top: 2px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: url("https://www.flaticon.com/svg/static/icons/svg/1804/1804462.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .comment {
+    resize: none;
+    height: 30px;
+    border-radius: 20px;
+    padding: 10px 0px 0px 4px;
+    // width: 350px;
+  }
+}
+
+textarea:focus,
+select:focus {
+  outline: none;
 }

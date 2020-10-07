@@ -9,22 +9,27 @@ let store = {
         {
           name: "Julius",
           id: 1,
+          message: 'Hi! How are you?'
         },
         {
           name: "Evelina",
           id: 2,
+          message: 'I love you!'
         },
         {
           name: "Natalija",
           id: 3,
+          message: 'How about new opportunities?'
         },
         {
           name: "Paulius",
           id: 4,
+          message: 'I have idea for your project :)'
         },
         {
           name: "Arturas",
           id: 5,
+          message: 'Im fine..'
         },
       ],
       messages: [
