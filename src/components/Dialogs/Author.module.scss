@@ -1,0 +1,35 @@
+.conversation {
+  background-color: rgb(255, 255, 255);
+  height: 40px;
+  margin-bottom: 2px;
+  padding: 4px;
+  .img {
+    width: 32px;
+    height: 32px;
+    padding-top: 2px;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQoHYtXTchhspak0O8PNPKAPD9Cf08U6284ng&usqp=CAU");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    float: left;
+    margin-right: 5px;
+  }
+  .title {
+    font-size: 13px;
+    height: 40%;
+    border-bottom: 1px solid rgb(255, 255, 255);
+  }
+  .message {
+    font-size: 10px;
+    height: 60%;
+    margin-top: 2px;
+  }
+}
+a {
+  color: rgb(77, 77, 77);
+  text-decoration: none;
+}
+.link.active {
+  color: rgb(255, 187, 0);
+}
