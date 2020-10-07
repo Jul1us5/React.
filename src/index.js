@@ -7,7 +7,7 @@ import store from "./redux/state";
 
 let rerender = (state) => {
   ReactDOM.render(
-    <App state={state} createPost={store.createPost.bind(store)} updatePostTextArea={store.updatePostTextArea.bind(store)}/>,
+    <App state={state} dispatch={store.dispatch.bind(store)} />,
     document.getElementById("root")
   );
 };
