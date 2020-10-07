@@ -3,10 +3,21 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import state from "./redux/state";
-import { rerender} from "./render"; 
+import state, { subscribe } from "./redux/state";
+// import { rerender} from "./render"; 
+
+import { createPost, updatePostTextArea } from "./redux/state";
+
+let rerender = (state) => {
+  ReactDOM.render(
+    <App state={state} createPost={createPost} updatePostTextArea={updatePostTextArea}/>,
+    document.getElementById("root")
+  );
+};
 
 rerender(state);
+
+subscribe(rerender);
 
 
 // If you want your app to work offline and load faster, you can change
