@@ -3,17 +3,6 @@
   display: grid;
   grid-template-columns: 4fr 10fr;
 }
-// span {
-//   display: grid;
-//   a {
-//     color: rgb(0, 0, 0);
-//     text-decoration: none;
-//     margin-top: 4px;
-//   }
-//   .active {
-//     color: red;
-//   }
-// }
 aside {
   margin: 0;
   padding: 10px;
@@ -45,6 +34,13 @@ aside {
       margin-top: 2px;
       border-radius: 50px;
     }
+  }
+  ::placeholder {
+    padding: 4px 0px 0px 4px;
+    font-size: 10px;
+  }
+  textarea {
+    color: rgb(66, 66, 66);
   }
   button {
     width: 50px;

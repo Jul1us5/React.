@@ -7,9 +7,12 @@ const Dialogs = (props) => {
   return (
     <section className={style.messages}>
       <Author authors={props.state.dialogs.authors} />
-      <Messages messages={props.state.dialogs.messages} />
+      <Messages messages={props.state.dialogs} dispatch={props.dispatch}/>
     </section>
   );
 };
 
 export default Dialogs;
+
+
+// newMessageText={props.state.dialogs.newMessageText}
