@@ -1,22 +1,19 @@
+const CREATE_POST = "CREATE-POST";
+const UPDATE_POST_AREA = "UPDATE-POST-AREA";
 
-
-const CREATE_POST = 'CREATE-POST';
-const UPDATE_POST_AREA = 'UPDATE-POST-AREA';
-
-const postsReducer = (state, action) => {
-  if (action.type === CREATE_POST) {
-    let newPost = {
-      id: 10,
-      text: state.newPostText,
-    };
-    state.newPostText = '';
-    state.onePost.push(newPost);
-    return state;
-  } else if (action.type === UPDATE_POST_AREA) {
-    state.newPostText = action.newText;
+export const postsReducer = (state, action) => {
+  switch (action.type) {
+    case CREATE_POST:
+      let newPost = { id: 10, text: state.newPostText };
+      state.newPostText = "";
+      state.onePost.push(newPost);
+      return state;
+    case UPDATE_POST_AREA:
+      state.newPostText = action.newText;
+      return state;
+    default:
+      return state;
   }
-
-  return state;
 };
 
 export const createPostAction = () => {
@@ -30,5 +27,3 @@ export const updatePostAction = (text) => {
     newText: text,
   };
 };
-
-export default postsReducer;

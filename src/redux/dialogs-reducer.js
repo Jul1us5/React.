@@ -1,7 +1,7 @@
 const CREATE_MESSAGE = "CREATE-MESSAGE";
 const UPDATE_MESSAGE_AREA = "UPDATE-MESSAGE-AREA";
 
-const dialogsReducer = (state, action) => {
+export const dialogsReducer = (state, action) => {
   switch (action.type) {
     case CREATE_MESSAGE:
       let newPosts = { id: 6, text: state.newMessageText };
@@ -27,5 +27,3 @@ export const updateMessageAction = (text) => {
     newTexts: text,
   };
 };
-
-export default dialogsReducer;
