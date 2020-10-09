@@ -8,7 +8,7 @@ const Section = (props) => {
     <section>
       <div className={style.header}>Header</div>
       {/* <div className={style.body}>Body</div> */}
-      <Post state={props.state.posts} newPostText={props.state.posts.newPostText} dispatch={props.dispatch}/>
+      <Post state={props.state.posts} dispatch={props.dispatch}/>
     </section>
   );
 
