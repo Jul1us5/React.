@@ -4,10 +4,13 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import store from "./redux/state";
+import { BrowserRouter } from "react-router-dom";
 
 let rerender = (state) => {
   ReactDOM.render(
-    <App state={state} dispatch={store.dispatch.bind(store)} />,
+    <BrowserRouter>
+      <App state={state} dispatch={store.dispatch.bind(store)} />
+    </BrowserRouter>,
     document.getElementById("root")
   );
 };

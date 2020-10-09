@@ -9,12 +9,11 @@ import Dialogs from "./components/Dialogs/Dialogs";
 import Profile from "./components/Profile/Profile";
 import Home from "./components/Home/Home";
 import Settings from "./components/Settings/Settings";
-import { BrowserRouter, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 const App = (props) => {
  
   return (
-    <BrowserRouter>
       <div className="wrapper">
         <Header />
         <Nav />
@@ -25,7 +24,6 @@ const App = (props) => {
         <Route path="/settings" render={ () => <Settings />} />
         <Footer />
       </div>
-    </BrowserRouter>
   );
 };
 

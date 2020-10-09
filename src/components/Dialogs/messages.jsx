@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Dialogs.module.scss";
-import { createMessageAction, updateMessageAction } from "../../redux/state"
+import { createMessageAction, updateMessageAction } from "../../redux/dialogs-reducer"
 
 
 

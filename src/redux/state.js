@@ -19,7 +19,7 @@ let store = {
         { id: 3, text: "I creating Single page application" },
         { id: 4, text: "React!" },
       ],
-      newMessageText: ''
+      newMessageText: '....',
     },
     posts: {
       onePost: [
@@ -50,14 +50,16 @@ let store = {
     } else if (action.type === UPDATE_POST_AREA) {
       this._state.posts.newPostText = action.newText;
       this._callSubscriber(this._state);
-    } else if (action.type === CREATE_MESSAGE) {
+    } 
+    
+    
+    else if (action.type === CREATE_MESSAGE) {
       let newPosts = {
         id: 6,
         text: this._state.dialogs.newMessageText,
       };
-      
-      this._state.dialogs.newMessageText = "";
       this._state.dialogs.messages.push(newPosts);
+      this._state.dialogs.newMessageText = "";
       this._callSubscriber(this._state);
     } else if (action.type === UPDATE_MESSAGE_AREA) {
       this._state.dialogs.newMessageText = action.newTexts;
