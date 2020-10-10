@@ -1,7 +1,15 @@
 const CREATE_POST = "CREATE-POST";
 const UPDATE_POST_AREA = "UPDATE-POST-AREA";
 
-export const postsReducer = (state, action) => {
+let initialState = {
+  onePost: [
+    { id: 1, text: "Hi! Its my first props!" },
+    { id: 2, text: "Im on my way!" },
+  ],
+  newPostText: "new Post",
+}
+
+export const postsReducer = (state = initialState, action) => {
   switch (action.type) {
     case CREATE_POST:
       let newPost = { id: 10, text: state.newPostText };
