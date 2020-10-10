@@ -16,8 +16,10 @@ const AuthorItem = (props) => {
 };
 
 const Author = (props) => {
-  
-  let AuthorDataElement = props.authors.map((el, i) => (
+  let x = props.dialogs.authors;
+  console.log(x);
+
+  let AuthorDataElement = props.dialogs.authors.map((el, i) => (
     <AuthorItem key={i} name={el.name} message={el.message} id={el.id} />
   ));
 

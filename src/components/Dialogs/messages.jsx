@@ -1,22 +1,18 @@
 import React from "react";
 import style from "./Dialogs.module.scss";
-import {
-  createMessageAction,
-  updateMessageAction,
-} from "../../redux/dialogs-reducer";
 
 let Messages = (props) => {
-  let MessageDataElement = props.messages.messages.map((el, s) => (
+  let MessageDataElement = props.dialogs.messages.map((el, s) => (
     <Message text={el.text} key={s} />
   ));
 
-  let addMessage = () => {
-    props.dispatch(createMessageAction());
+  let onAddMessage = () => {
+    props.addMessage();
   };
 
   let onMessageChange = (e) => {
     let text = e.target.value;
-    props.dispatch(updateMessageAction(text));
+    props.newMessageText(text);
   };
 
   return (
@@ -32,10 +28,10 @@ let Messages = (props) => {
         <textarea
           placeholder="Enter your message"
           className={style.comment}
-          value={props.messages.newMessageText}
+          value={props.dialogs.newMessageText}
           onChange={onMessageChange}
         />
-        <button onClick={addMessage}></button>
+        <button onClick={onAddMessage}></button>
       </div>
     </aside>
   );

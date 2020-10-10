@@ -1,10 +1,10 @@
 import React from "react";
-import Post from "./Post";
+import Post from "../Post";
 
 import {
   createPostAction,
   updatePostAction,
-} from "../../../redux/posts-reducer";
+} from "../../../../redux/posts-reducer";
 
 const PostContainer = (props) => {
   let state = props.store.getState();

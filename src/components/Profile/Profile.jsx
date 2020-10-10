@@ -5,7 +5,7 @@ import style from "./Profile.module.scss";
 
 const Profile = (props) => {
   return (
-    <section>
+    <section className={style.profile}>
       <Info />
     </section>
   );

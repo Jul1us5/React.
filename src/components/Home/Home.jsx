@@ -4,7 +4,7 @@ import style from "./Home.module.scss";
 
 const Home = (props) => {
   return (
-    <section>
+    <section className={style.home}>
       Home
     </section>
   );

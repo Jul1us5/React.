@@ -1,18 +1,15 @@
 import React from "react";
 import style from "./Dialogs.module.scss";
-import Messages from "./messages";
-import Author from "./Author";
+import MessagesContainer from "./Container/MessagesContainer";
+import AuthorContainer from "./Container/AuthorContainer";
 
 const Dialogs = (props) => {
   return (
     <section className={style.messages}>
-      <Author authors={props.state.dialogs.authors} />
-      <Messages messages={props.state.dialogs} dispatch={props.dispatch}/>
+      <AuthorContainer store={props.store} />
+      <MessagesContainer store={props.store} />
     </section>
   );
 };
 
 export default Dialogs;
-
-
-// newMessageText={props.state.dialogs.newMessageText}
