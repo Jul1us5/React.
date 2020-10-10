@@ -15,7 +15,7 @@ let initialState = {
     { id: 3, text: "I creating Single page application" },
     { id: 4, text: "React!" },
   ],
-  newMessageText: ":D",
+  newMessageText: "",
 }
 
 export const dialogsReducer = (state = initialState, action) => {

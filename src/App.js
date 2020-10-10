@@ -18,10 +18,8 @@ const App = (props) => {
         <Header />
         <Nav />
         <Home />
-        {/* <Route path="/dialogs" render={ () => <Dialogs state={props.state} dispatch={props.dispatch}/>} /> */}
         <Route path="/dialogs" render={ () => <Dialogs store={props.store}/>} />
         <Route path="/section" render={ () => <Section store={props.store}/>} />
-        {/* <Route path="/section" render={ () => <Section state={props.state} dispatch={props.dispatch}/>} /> */}
         <Route path="/profile" render={ () => <Profile />} />
         <Route path="/settings" render={ () => <Settings />} />
         <Footer />

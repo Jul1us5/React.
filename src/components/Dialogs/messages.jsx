@@ -1,14 +1,7 @@
 import React from "react";
 import style from "./Dialogs.module.scss";
-// import {
-//   createMessageAction,
-//   updateMessageAction,
-// } from "../../redux/dialogs-reducer";
 
 let Messages = (props) => {
-
-  // console.log(props.dialogs.messages);
-
   let MessageDataElement = props.dialogs.messages.map((el, s) => (
     <Message text={el.text} key={s} />
   ));
@@ -21,7 +14,6 @@ let Messages = (props) => {
     let text = e.target.value;
     props.newMessageText(text);
   };
-  console.log(props.dialogs.newMessageText);
 
   return (
     <aside>
@@ -37,7 +29,6 @@ let Messages = (props) => {
           placeholder="Enter your message"
           className={style.comment}
           value={props.dialogs.newMessageText}
-          
           onChange={onMessageChange}
         />
         <button onClick={onAddMessage}></button>
