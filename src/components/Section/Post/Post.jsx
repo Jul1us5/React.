@@ -12,15 +12,13 @@ const Post = (props) => {
     <Posted value={el.text} key={i} />
   ));
 
-  let newPostElement = React.createRef();
-
   let onAddPost = () => {
     props.addPost();
     // props.dispatch(createPostAction());
   };
 
-  let onPostChange = () => {
-    let text = newPostElement.current.value;
+  let onPostChange = (e) => {
+    let text = e.target.value;
     props.newPostText(text);
     // props.dispatch(updatePostAction(text));
   };
@@ -28,7 +26,6 @@ const Post = (props) => {
   return (
     <div className={style.body}>
       <textarea
-        ref={newPostElement}
         onChange={onPostChange}
         className={style.comment}
         value={props.posts.newPostText}
