@@ -18,8 +18,8 @@ const App = (props) => {
         <Header />
         <Nav />
         <Home />
-        <Route path="/dialogs" render={ () => <Dialogs store={props.store}/>} />
-        <Route path="/section" render={ () => <Section store={props.store}/>} />
+        <Route path="/dialogs" render={ () => <Dialogs />} />
+        <Route path="/section" render={ () => <Section />} />
         <Route path="/profile" render={ () => <Profile />} />
         <Route path="/settings" render={ () => <Settings />} />
         <Footer />

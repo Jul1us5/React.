@@ -1,10 +1,12 @@
-import React from "react";
+import { connect } from "react-redux";
 import Author from "../Author";
 
-const AuthorContainer = (props) => {
-  let state = props.store.getState();
-
-  return <Author dialogs={state.dialogs} />;
+const manStateToProps = (state) => {
+  return {
+    dialogs: state.dialogs,
+  };
 };
+
+const AuthorContainer = connect(manStateToProps)(Author);
 
 export default AuthorContainer;
