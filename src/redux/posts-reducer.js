@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const CREATE_POST = "CREATE-POST";
 const UPDATE_POST_AREA = "UPDATE-POST-AREA";
 
@@ -11,20 +12,18 @@ let initialState = {
 
 export const postsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case CREATE_POST: {
+    case CREATE_POST:
+      let stateCopy = { ...state }, onePost = [...state.onePost];
       let newPost = { id: 10, text: state.newPostText };
-      let stateCopy = { ...state };
-
-      stateCopy.onePost = [...state.onePost];
+      
       stateCopy.onePost.push(newPost);
       stateCopy.newPostText = "";
       return stateCopy;
-    }
-    case UPDATE_POST_AREA: {
-      let stateCopy = { ...state };
+
+    case UPDATE_POST_AREA:
       stateCopy.newPostText = action.newText;
       return stateCopy;
-    }
+
     default:
       return state;
   }
