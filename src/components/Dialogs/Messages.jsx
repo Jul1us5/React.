@@ -2,7 +2,6 @@ import React from "react";
 import style from "./Dialogs.module.scss";
 
 let Messages = (props) => {
-  
   let MessageDataElement = props.dialogs.messages.map((el, s) => (
     <Message text={el.text} key={s} />
   ));
