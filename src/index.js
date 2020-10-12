@@ -7,7 +7,8 @@ import { BrowserRouter } from "react-router-dom";
 import store from "./redux/redux-store";
 import { Provider } from "react-redux";
 
-let rerender = (store) => {
+// let rerender = (store) => {
+
   ReactDOM.render(
     <BrowserRouter>
       <Provider store={store}>
@@ -16,12 +17,12 @@ let rerender = (store) => {
     </BrowserRouter>,
     document.getElementById("root")
   );
-};
+// };
 
-rerender(store);
+// rerender(store);
 
-store.subscribe(() => {
-  rerender(store);
-});
+// store.subscribe(() => {
+//   rerender(store);
+// });
 
 serviceWorker.unregister();
