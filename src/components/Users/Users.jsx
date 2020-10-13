@@ -1,13 +1,10 @@
 import React from 'react';
-import User from './User/User';
+import UserContainer from './Container/UserContainer';
 import style from './Users.module.scss'
 
 const Users = (props) => {
   return <section className={style.users}>
-    <User />
-    <User />
-    <User />
-    <User />
+    <UserContainer />
   </section>;
 };
 

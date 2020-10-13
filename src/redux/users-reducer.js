@@ -20,9 +20,19 @@ let initialState = {
       city: "London",
       title: "Im React developer!",
     },
+    {
+      id: 3,
+      firstname: "Paulius",
+      lastname: "Povilaitis",
+      img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBj1wk7gWqOcoAS0vSxJx8IW0Mum7MlijqzQ&usqp=CAU',
+      preview: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0sR_nKqeERORWEo18Yzdbbr0-asTLIiDRzg&usqp=CAU',
+      country: "England",
+      city: "London",
+      title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, corrupti.',
+    },
   ],
 };
 
-export const postsReducer = (state = initialState) => {
+export const usersReducer = (state = initialState) => {
   return state;
 };
