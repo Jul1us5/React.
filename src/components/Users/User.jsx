@@ -2,6 +2,7 @@ import React from "react";
 import style from "./User.module.scss";
 
 let User = (props) => {
+  console.log(props);
   let printUser = props.users.user.map((el, i) => (
     <OneMember
       key={i}
