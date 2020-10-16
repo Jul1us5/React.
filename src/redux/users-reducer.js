@@ -1,3 +1,7 @@
+
+const USER_FOLLOW = 'USER-FOLLOW'
+const USER_UNFOLLOW = 'USER-UNFOLLOW'
+
 let initialState = {
   user: [
     {
@@ -9,6 +13,7 @@ let initialState = {
       country: "Lithuania",
       city: "Vilnius",
       title: "Hi. Im Front-End developer!",
+      follow: false
     },
     {
       id: 2,
@@ -19,6 +24,7 @@ let initialState = {
       country: "England",
       city: "London",
       title: "Im React developer!",
+      follow: false
     },
     {
       id: 3,
@@ -29,6 +35,7 @@ let initialState = {
       country: "England",
       city: "London",
       title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, corrupti.',
+      follow: false
     },
   ],
 };
@@ -36,3 +43,15 @@ let initialState = {
 export const usersReducer = (state = initialState) => {
   return state;
 };
+
+export const followAC = (userid) => {
+  return {
+    type: USER_FOLLOW, userid
+  };
+}
+
+export const unfollowAC = (userid) => {
+  return {
+    type: USER_UNFOLLOW, userid
+  }
+}
