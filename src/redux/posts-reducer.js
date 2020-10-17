@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 const CREATE_POST = "CREATE-POST";
 const UPDATE_POST_AREA = "UPDATE-POST-AREA";
 

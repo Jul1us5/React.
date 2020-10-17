@@ -1,14 +1,14 @@
 $bg: rgb(255, 255, 255);
 
-.userWrap {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
+// .userWrap {
+//   display: grid;
+//   width: 100%;
+//   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+// }
 
 .user {
   position: relative;
-
+  
   height: 250px;
   margin: 4px;
   border-radius: 10px;

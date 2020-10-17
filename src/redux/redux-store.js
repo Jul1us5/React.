@@ -5,8 +5,8 @@ import { usersReducer } from "./users-reducer";
 
 let reducers = combineReducers({
   dialogs: dialogsReducer,
-  posts: postsReducer,
   users: usersReducer,
+  posts: postsReducer,
 });
 
 const store = createStore(reducers);
